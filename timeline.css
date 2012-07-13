@@ -1,0 +1,57 @@
+#timeliner {
+  background: #fff url(spine.png) repeat-y center top;
+  padding: 10px 0 20px;
+  width: 500px;
+}
+#timeline li {
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0 2px 5px#666;
+  -moz-box-shadow: 0 2px 5px#666;
+  box-shadow: 0 2px 5px#666;
+  clear: both;
+  color: #666;
+  min-height: 96px;
+  margin: 0 6px 6px;
+  padding: 6px;
+  position: relative;
+  width: 200px;
+  z-index: 500;
+}
+#timeline li img {
+  float: left;
+  margin-right: 10px;
+}
+#timeline .timestamp {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 6px;
+}
+#timeline .permalink {
+  bottom: 6px;
+  position: absolute;
+  right: 6px;
+}
+#timeline li.begin {
+  float: left;
+  top: 20px;
+}
+#timeline li.end {
+  float: right;
+}
+.branch {
+  height: 15px;
+  position: absolute;
+  top: 47px;
+  width: 35px;
+  z-index: 1;
+}
+.begin .branch {
+  background: transparent url(branch.png) no-repeat right;
+  right: -37px;
+  width 33px;
+}
+.end .branch {
+  background: transparent url(branch.png) no-repeat left;
+  left: -35px;
+}

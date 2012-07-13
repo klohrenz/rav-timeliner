@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Timeliner: A project timeline</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="noodp" name="robots">
+<link href="http://style2.ravelrycache.com/stylesheets/ravelry_global_1206151136.css" rel="Stylesheet" type="text/css">
+<link href="http://style3.ravelrycache.com/stylesheets/ravelry_components_1206131125.css" rel="Stylesheet" type="text/css">
+<script src="http://style2.ravelrycache.com/javascripts/base11_1110072004.js" type="text/javascript"></script>
+<script src="http://style2.ravelrycache.com/javascripts/ravelry_1206131206.js" type="text/javascript"></script>
+<link href="http://www.ravelry.com/projects/klohrenz.rss" rel="alternate" title="RSS" type="application/rss+xml">
+<link rel="search" type="application/opensearchdescription+xml" title="Ravelry" href="http://www.ravelry.com/search.xml">
+<!--[if lt IE 7]> 
+<link href="http://style2.ravelrycache.com/stylesheets/ie6.r12.css" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lt IE 9]> 
+<link href="http://style1.ravelrycache.com/stylesheets/ie.r4.css" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!-- ADDED CODE HERE -->
+<script type="text/javascript" src="timeline.js"></script>
+<script src="http://api.ravelry.com/projects/klohrenz/progress.json?callback=Timeliner.projectsLoaded&key=1c76f6da2e0c4c8caffd7ae3bc5f1fd70b78961b&version=0&status=finished"></script>
+<link type="text/css" rel="stylesheet" href="timeline.css" />
+<!-- ADDED CODE HERE -->
+</head>
+<body class="notebook normal">
+<div id="page">
+  <div id="banner"> <a href="http://www.ravelry.com/"><img height="73" src="http://style1.ravelrycache.com/images/ravelry-logo.gif" title="Ravelry!" width="213"></a> </div>
+  <div id="status">
+    <div id="messages">
+      <div id="login">
+        <div id="logged_in"> hiya, <strong> <a href="http://www.ravelry.com/people/klohrenz" class="login">klohrenz</a>! </strong> <a href="http://www.ravelry.com/account/logout" onclick="R.accounts.logout(); return false;">logout</a> </div>
+        <div id="inbox"> <span id="unread_messages_count"> <a href="http://www.ravelry.com/people/klohrenz/messages">no new messages</a> </span> </div>
+      </div>
+    </div>
+  </div>
+  <div id="navigation">
+    <ul>
+      <li class="active" id="notebook_tab"> <a href="http://www.ravelry.com/projects/klohrenz">my notebook</a>
+        <div id="profile_menu" style="display: none;">
+          <div class="profile_menu_top"> <a href="#" onclick="R.people.closeProfileMenu(); return false;">&nbsp;&nbsp;&nbsp;&nbsp;</a> </div>
+          <div class="profile_menu_content">
+            <div id="profile_menu_progress"></div>
+            <div id="profile_menu_results">
+              <div class="loading" style="text-align: center; padding-top: 10px;"> <img src="http://style3.ravelrycache.com/images/circle-ball-dark-antialiased.gif"> </div>
+            </div>
+          </div>
+          <div class="profile_menu_bottom"></div>
+        </div>
+      </li>
+      <li id="patterns_tab"><a href="http://www.ravelry.com/patterns">patterns</a></li>
+      <li id="yarns_tab"><a href="http://www.ravelry.com/yarns">yarns</a></li>
+      <li><a href="http://www.ravelry.com/people">people</a></li>
+      <li><a href="http://www.ravelry.com/discuss">forums</a></li>
+      <li><a href="http://www.ravelry.com/groups">groups</a></li>
+      <li><a href="http://www.ravelry.com/shop">shop</a></li>
+      <li id="help_tab"> <a href="http://www.ravelry.com/help" style="font-size: 1.2em;" title="Ravelry Help"><img height="18" src="http://style0.ravelrycache.com/images/question2-2.png" width="17"></a> </li>
+      <li id="search_tab" onclick="R.searchlight.tabClicked();"> <a href="http://www.ravelry.com/search" onclick="return false;" title="Search ravelry"><img class="inline" height="16" src="http://style3.ravelrycache.com/images/fugue-magnifier_left.png" width="16"></a> </li>
+      <li id="carts_tab"> <a href="http://www.ravelry.com/carts" style="font-size: 12px;" title="View your basket">2 <img class="inline" height="16" src="http://style1.ravelrycache.com/images/silk-basket.png" style="padding: 0;" width="16"></a> </li>
+    </ul>
+  </div>
+  <div id="searchlight" style="display: none;">
+    <div class="searchlight_top"> <a href="#" onclick="R.searchlight.close(); return false;">&nbsp;&nbsp;&nbsp;&nbsp;</a> </div>
+    <div class="searchlight_content">
+      <div class="section"> <img class="inline" src="http://style2.ravelrycache.com/images/fugue-lightning.png"> quick search </div>
+      <form onsubmit="R.searchlight.search(); return false;">
+        <input id="searchlight_term" type="text">
+        <div id="searchlight_progress"></div>
+      </form>
+      <div id="searchlight_results"></div>
+      <div class="section"> <img class="inline" src="http://style0.ravelrycache.com/images/advanced-search-tiny.png"> advanced search </div>
+      <div class="advanced_searchlight searchlight_component" id="advanced_search_links">
+        <ul>
+          <li><a href="http://www.ravelry.com/patterns/search#query=" id="searchlight_patterns_advanced">patterns</a></li>
+          <li><a href="http://www.ravelry.com/projects/search#query=">projects</a></li>
+          <li><a href="http://www.ravelry.com/designers/search#query=">designers</a></li>
+          <li><a href="http://www.ravelry.com/sources/search#query=">sources</a></li>
+        </ul>
+        <ul>
+          <li><a href="http://www.ravelry.com/yarns/search#query=">yarns</a></li>
+          <li><a href="http://www.ravelry.com/stash/search#query=">stashes</a></li>
+          <li><a href="http://www.ravelry.com/yarns/brands/search#query=">yarn brands</a></li>
+        </ul>
+        <ul>
+          <li><a href="http://www.ravelry.com/people/search#query=">people</a></li>
+          <li><a href="http://www.ravelry.com/groups/search#query=">groups</a></li>
+          <li><a href="http://www.ravelry.com/discuss/search#query=&amp;view=posts">forum posts</a></li>
+          <li><a href="http://www.ravelry.com/discuss/search#query=&amp;view=topics">topics</a></li>
+          <li><a href="http://www.ravelry.com/events/search#query=">events</a></li>
+        </ul>
+        <div style="clear:both;" class="c_d"></div>
+      </div>
+      <div class="section"> <img class="inline" height="16" src="http://style2.ravelrycache.com/images/silk-disk.png" width="16"> my saved searches </div>
+      <div class="saved_searchlight searchlight_component" id="searchlight_saved_searches"></div>
+    </div>
+    <div class="searchlight_bottom"></div>
+  </div>
+  <div id="content">
+    <div class="heading">
+      <h2> <a href="http://www.ravelry.com/people/klohrenz" class="breadcrumb_avatar avatar_bubble" id="ab_klohrenz" title="View klohrenz's profile"><img height="25" src="http://avatars.ravelrycache.com/klohrenz/6730638/n16800575_36268751_8378_tiny.jpg" width="25"></a> <a href="http://www.ravelry.com/people/klohrenz" class="notebook_login">klohrenz</a> <small><a href="http://www.ravelry.com/people/klohrenz">about me</a></small> </h2>
+    </div>
+    <div class="notebook_page">
+      <div class="sidebar">
+        <div class="chiclet" id="project_menu">
+          <div class="head"></div>
+          <ul>
+            <li class="first" id="current"><span class="static_tab" id="projects_tab"><a href="http://www.ravelry.com/projects/klohrenz">projects</a></span></li>
+            <li><span class="static_tab" id="stash_tab"><a href="http://www.ravelry.com/people/klohrenz/stash">stash</a></span></li>
+            <li><span class="static_tab" id="queue_tab"><a href="http://www.ravelry.com/people/klohrenz/queue">queue</a></span></li>
+            <li><span class="static_tab" id="favorites_tab"><a href="http://www.ravelry.com/people/klohrenz/favorites">favorites</a></span></li>
+            <li><span class="static_tab" id="friends_tab"><a href="http://www.ravelry.com/people/klohrenz/friends">friends</a></span></li>
+            <li><span class="static_tab" id="user_groups_tab"><a href="http://www.ravelry.com/people/klohrenz/groups">groups &amp; events</a></span></li>
+            <li><span class="static_tab" id="needles_tab"><a href="http://www.ravelry.com/people/klohrenz/needles">needles &amp; hooks</a></span></li>
+            <li><span class="static_tab" id="library_tab"><a href="http://www.ravelry.com/people/klohrenz/library">library</a></span></li>
+            <li><span class="static_tab" id="user_messages_tab"><a href="http://www.ravelry.com/people/klohrenz/messages">message box</a></span></li>
+            <li><span class="static_tab" id="posts_tab"><a href="http://www.ravelry.com/people/klohrenz/posts">blog posts</a></span></li>
+            <li><span class="static_tab" id="contributions_tab"><a href="http://www.ravelry.com/people/klohrenz/contributions">contributions</a></span></li>
+            <li class="last"><span class="static_tab" id="purchases_tab"><a href="http://www.ravelry.com/people/klohrenz/purchases">purchases</a></span></li>
+          </ul>
+          <div class="foot"></div>
+        </div>
+      </div>
+      <div class="projects_index_panel panel" id="projects_panel" style="height: auto;">
+        <div id="notebook_header">
+          <div class="tabs" id="tabset">
+            <ul>
+              <li><span class="static_tab" id="index_tab"><a href="http://www.ravelry.com/projects/klohrenz?view=thumbnail"><strong>65</strong> projects</a></span></li>
+              <li><span class="static_tab" id="12-socks-in-2012_tab"><a href="http://www.ravelry.com/projects/klohrenz?set=12-socks-in-2012&amp;view=thumbnail">12 socks in 2012</a></span></li>
+              <li id="current"><span class="static_tab" id="timeline_tab"><a href="#">timeline</a></span></li>
+              <li><span class="static_tab" id="organize_tab"><a href="http://www.ravelry.com/projects/klohrenz/organize"><img src="http://style1.ravelrycache.com/images/fugue-folder_open_image.png"> organize</a></span></li>
+            </ul>
+          </div>
+          <form action="/projects/klohrenz" class="autosubmit short" id="project_search_form" method="post">
+            <div style="margin:0;padding:0;display:inline">
+              <input name="authenticity_token" type="hidden" value="QBVI0k4b2a08+i+/4hYKO0d9Wurh4uYm/hm416SSt4o=">
+            </div>
+            <input id="pageless_page" name="page" type="hidden" value="">
+            <input id="set" name="set" type="hidden" value="">
+            <div style="clear:both;" class="c_d"></div>
+            <table class="tabular_toolbar">
+              <tbody>
+                <tr class="toolset">
+                  <td><span><a href="http://www.ravelry.com/projects/klohrenz/prepare" class="clicker"><span>add project</span></a></span></td>
+                  <td class="select_tool"><select id="sort" name="sort" style="width: 150px;">
+                      <option value=""></option>
+                      <option value="status">WIPs, happiest 1st</option>
+                      <option value="status completed_ status_changed_">WIPs, recently completed 1st</option>
+                      <option value="rating_">Happiness</option>
+                      <option value="favorites_">Favorites</option>
+                      <option value="started_ status_changed_">Recently started</option>
+                      <option value="completed_ status_changed_">Recently completed</option>
+                      <option value="created_" selected="selected">Recently added</option>
+                      <option value="name">Name</option>
+                    </select></td>
+                  <td class="select_tool"><select id="project_status_id" name="project_status_id">
+                      <option value="0">All projects</option>
+                      <option value="1">In progress</option>
+                      <option value="2">Finished</option>
+                      <option value="3">Hibernating</option>
+                      <option value="4">Frogged</option>
+                    </select></td>
+                  <td class="label"> Search </td>
+                  <td class="search_tool"><input id="search" name="search" type="text" value=""></td>
+                  <td class="progress"><img id="progress" src="http://style1.ravelrycache.com/images/progress.gif" style="display:none;"></td>
+                  <td class="spacer">&nbsp;</td>
+                  <td class="button_tool"><div class="button menu_link" id="rss"><a href="http://www.ravelry.com/projects/klohrenz.rss" title="Subscribe to feeds"><img height="16" src="http://style3.ravelrycache.com/images/silk-feed.png" width="16"></a></div>
+                    <div class="container" style="position: relative;">
+                      <div class="menu" id="rss_menu" style="display: none; left: -7px;">
+                        <div class="title">RSS Feeds</div>
+                        <div class="close"><a href="http://www.ravelry.com/projects/klohrenz"><img src="http://style3.ravelrycache.com/images/close.gif"></a></div>
+                        <ul>
+                          <li></li>
+                          <li><a href="http://www.ravelry.com/projects/klohrenz.rss"><img height="16" src="http://style1.ravelrycache.com/images/silk-rss.png" width="16"> klohrenz's projects</a></li>
+                          <li><a href="http://www.ravelry.com/projects/klohrenz.rss?status=finished"><img height="16" src="http://style1.ravelrycache.com/images/silk-rss.png" width="16"> klohrenz's finished objects</a></li>
+                          <li><a href="http://www.ravelry.com/projects/klohrenz/comments.rss"><img height="16" src="http://style1.ravelrycache.com/images/silk-rss.png" width="16"> comments on projects</a></li>
+                          <li><a href="http://www.ravelry.com/people/klohrenz/friends.rss"><img height="16" src="http://style1.ravelrycache.com/images/silk-rss.png" width="16"> my friends' projects</a></li>
+                        </ul>
+                      </div>
+                    </div></td>
+                  <td class="button_tool"><div class="button">
+                      <div class="hidden_content" id="hidden_content_" style="display: none;"></div>
+                      <a class="slideshow" href="#" onclick="new Ajax.Updater('hidden_content_', 'http://www.ravelry.com/projects/klohrenz/slideshow', {asynchronous:true, evalScripts:true, onComplete:function(request){RedBox.addHiddenContent('hidden_content_'); slideshowRedbox();}, onLoading:function(request){RedBox.loading(); }, parameters:'authenticity_token=' + encodeURIComponent('QBVI0k4b2a08+i+/4hYKO0d9Wurh4uYm/hm416SSt4o=')}); return false;" title="View a slideshow of all project photos"><img height="16" src="http://style2.ravelrycache.com/images/silk-images.png" width="16"></a></div></td>
+                  <td class="button_tool"><div class="button"><a href="http://www.flickr.com/photos/41557081@N00" target="_blank" title="klohrenz's flickr page"><img src="http://style1.ravelrycache.com/images/flickr-favicon.gif"></a></div></td>
+                  <td class="short_selector_tool"><div class="container">
+                      <ul class="short_selector" id="view_selector" onclick="R.controls.openViewSelector();" onmouseout="R.controls.closeViewSelector();" onmouseover="R.controls.openViewSelector();" style="top: -12px; right: 3px;">
+                        <li class="selected"><a href=""><img src="http://style2.ravelrycache.com/images/view-thumbnail.png"> thumbnails</a></li>
+                        <li><a href=""><img src="http://style2.ravelrycache.com/images/view-list.png"> list</a></li>
+                      </ul>
+                    </div></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+        <div style="clear:both;" class="c_d"></div>
+<!-- ADDED CODE HERE -->
+        <div id="timeliner">
+          <script type="text/javascript">Timeliner.drawTimeline();</script>
+          <div style="clear:both;" class="c_d"></div>
+        </div>
+<!-- ADDED CODE HERE -->
+      </div>
+    </div>
+  </div>
+  <div style="clear:both;" class="c_d"></div>
+  <div id="preload_default_images"> <span> <span></span> </span> </div>
+  <div id="prefooter"></div>
+</div>
+<div id="footer">
+  <div class="linkbar"> <a href="http://www.ravelry.com/">Home</a> | <a href="http://www.ravelry.com/about">About Us</a> | <a href="http://www.ravelry.com/advertisers">Advertising</a> | <a href="http://www.ravelry.com/contact">Contact Us</a> | <a href="http://www.ravelry.com/donate">Donating</a> | <a href="http://www.ravelry.com/about/goodies">Goodies</a> | <a href="http://www.ravelry.com/jobs">We're Hiring!</a> | <a href="http://www.ravelry.com/groups/ravelry-api">API</a> | <a href="http://www.ravelry.com/about/guidelines">Community Guidelines</a>, <a href="http://www.ravelry.com/about/terms">Terms of Use</a> &amp; <a href="http://www.ravelry.com/about/privacy">Privacy</a> | <a href="http://twitter.com/ravelry" target="_blank"><img height="16" src="http://style2.ravelrycache.com/images/splash/twitter.png" style="vertical-align: top;" width="16"></a> </div>
+</div>
+</body>
+</html>
